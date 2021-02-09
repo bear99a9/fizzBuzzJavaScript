@@ -9,4 +9,10 @@ class FizzBuzz {
       return true;
     }
   }
+
+  _isDivisibleByFifteen(number) {
+    if (number % 15 === 0) {
+      return true;
+    }
+  }
 }
