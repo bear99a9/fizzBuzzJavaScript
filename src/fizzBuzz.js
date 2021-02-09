@@ -4,4 +4,9 @@ class FizzBuzz {
       return true;
     }
   }
+  _isDivisibleByFive(number) {
+    if (number % 5 === 0) {
+      return true;
+    }
+  }
 }
