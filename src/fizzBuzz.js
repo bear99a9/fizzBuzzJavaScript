@@ -23,6 +23,8 @@ class FizzBuzz {
       return "Fizz";
     }else if (this._isDivisibleByFive(number)) {
       return "Buzz"
+    }else {
+      return number;
     }
   }
 }
