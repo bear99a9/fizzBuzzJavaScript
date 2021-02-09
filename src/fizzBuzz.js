@@ -1,30 +1,17 @@
-class FizzBuzz {
-  _isDivisibleByThree(number) {
-    if (number % 3 === 0) {
-      return true;
-    }
-  }
-  _isDivisibleByFive(number) {
-    if (number % 5 === 0) {
-      return true;
-    }
-  }
+class Fizzbuzz {
+    _isDivisibleBy(divisor, number) {
+      return number % divisor === 0;
+    };
 
-  _isDivisibleByFifteen(number) {
-    if (number % 15 === 0) {
-      return true;
-    }
-  }
-
-  result(number) {
-    if (this._isDivisibleByFifteen(number)) {
-      return "FizzBuzz";
-    }else if (this._isDivisibleByThree(number)) {
-      return "Fizz";
-    }else if (this._isDivisibleByFive(number)) {
-      return "Buzz"
-    }else {
-      return number;
-    }
-  }
-}
+    result(number) {
+    if(this._isDivisibleBy(15, number)){
+            return "FizzBuzz"
+      }else if(this._isDivisibleBy(5, number)){
+          return "Buzz";
+      }else if(this._isDivisibleBy(3, number)){
+            return "Fizz";
+      }else {
+          return number;
+      };
+    };
+};

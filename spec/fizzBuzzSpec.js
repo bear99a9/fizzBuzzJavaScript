@@ -1,39 +1,52 @@
-describe('FizzBuzz', function() {
-  let fizzBuzz;
+describe('Fizzbuzz', function() {
 
-  beforeEach(function() {
-    fizzBuzz = new FizzBuzz();
-  });
+    let fizzbuzz;
 
-  describe('can work out when a number is', function() {
-    it('divisible by 3', function() {
-      expect(fizzBuzz._isDivisibleByThree(3)).toBe(true)
+    beforeEach(function() {
+        fizzbuzz = new Fizzbuzz();
     });
 
-    it('divisible by 5', function() {
-      expect(fizzBuzz._isDivisibleByFive(5)).toBe(true)
+    describe('knows when a number is', function(){
+        it('divisible by 3', function(){
+            expect(fizzbuzz._isDivisibleBy(3, 3)).toBe(true);
+        });
+
+        it('not divisible by 3', function() {
+            expect(fizzbuzz._isDivisibleBy(3, 4)).toBe(false);
+        });
+
+        it('divisible by 5', function() {
+            expect(fizzbuzz._isDivisibleBy(5, 5)).toBe(true);
+        });
+
+        it('not divisible by 5', function() {
+            expect(fizzbuzz._isDivisibleBy(5, 7)).toBe(false);
+        });
+
+        it('is divisible by 15', function() {
+            expect(fizzbuzz._isDivisibleBy(15, 15)).toBe(true);
+        });
+
+        it('not divisible by 15', function() {
+          expect(fizzbuzz._isDivisibleBy(15, 16)).toBe(false);
+        });
     });
 
-    it('divisible by 15', function() {
-      expect(fizzBuzz._isDivisibleByFifteen(15)).toBe(true)
+    describe('returns the correct string or number', function() {
+        it('returns fizz when divisible by three', function() {
+            expect(fizzbuzz.result(3)).toBe("Fizz")
+        });
+
+        it('returns buzz when divisible by 5', function() {
+            expect(fizzbuzz.result(5)).toBe("Buzz")
+        });
+
+        it('returns FizzBuzz when divisible by 15', function() {
+            expect(fizzbuzz.result(15)).toBe("FizzBuzz")
+        });
+
+        it('returns the number when it is not divisible by 3 or 5', function() {
+            expect(fizzbuzz.result(4)).toBe(4)
+        });
     });
-  });
-
-  describe('returns the output of fizzbuzz rules', function() {
-    it('returns Fizz when divisible by 3', function() {
-      expect(fizzBuzz.result(3)).toBe("Fizz")
-    });
-
-    it('returns Buzz when divisible by 5', function() {
-      expect(fizzBuzz.result(5)).toBe("Buzz")
-    })
-
-    it('returns FizzBuzz when divisible by 15', function() {
-      expect(fizzBuzz.result(15)).toBe("FizzBuzz")
-    })
-
-    it('returns the inputted number if not divisible by 3 or 5', function() {
-      expect(fizzBuzz.result(4)).toBe(4)
-    })
-  });
 });
