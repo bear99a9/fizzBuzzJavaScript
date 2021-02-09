@@ -23,5 +23,9 @@ describe('FizzBuzz', function() {
     it('returns Fizz when divisible by 3', function() {
       expect(fizzBuzz.result(3)).toBe("Fizz")
     });
+
+    it('returns Buzz when divisible by 5', function() {
+      expect(fizzBuzz.result(5)).toBe("Buzz")
+    })
   });
 });
