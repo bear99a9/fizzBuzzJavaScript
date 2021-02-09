@@ -17,7 +17,9 @@ class FizzBuzz {
   }
 
   result(number) {
-    if (this._isDivisibleByThree(number)) {
+    if (this._isDivisibleByFifteen(number)) {
+      return "FizzBuzz";
+    }else if (this._isDivisibleByThree(number)) {
       return "Fizz";
     }else if (this._isDivisibleByFive(number)) {
       return "Buzz"

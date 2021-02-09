@@ -27,5 +27,9 @@ describe('FizzBuzz', function() {
     it('returns Buzz when divisible by 5', function() {
       expect(fizzBuzz.result(5)).toBe("Buzz")
     })
+
+    it('returns FizzBuzz when divisible by 15', function() {
+      expect(fizzBuzz.result(15)).toBe("FizzBuzz")
+    })
   });
 });
