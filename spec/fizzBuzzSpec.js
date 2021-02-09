@@ -18,4 +18,10 @@ describe('FizzBuzz', function() {
       expect(fizzBuzz._isDivisibleByFifteen(15)).toBe(true)
     });
   });
+
+  describe('returns the output of fizzbuzz rules', function() {
+    it('returns Fizz when divisible by 3', function() {
+      expect(fizzBuzz.result(3)).toBe("Fizz")
+    });
+  });
 });

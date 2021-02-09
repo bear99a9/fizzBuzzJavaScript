@@ -15,4 +15,10 @@ class FizzBuzz {
       return true;
     }
   }
+
+  result(number) {
+    if (this._isDivisibleByThree(number)) {
+      return "Fizz";
+    }
+  }
 }
